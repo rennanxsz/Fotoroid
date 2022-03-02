@@ -25,6 +25,9 @@
                                 <rect key="frame" x="95" y="318" width="224" height="214"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="camera"/>
+                                <connections>
+                                    <action selector="selectSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ap3-Xl-NzO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tire/Escolha sua foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdF-fx-XUv">
                                 <rect key="frame" x="113.5" y="540" width="187.5" height="24"/>
@@ -100,19 +103,37 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEX-Hg-cg9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-Cw-HMf">
+                                        <rect key="frame" x="188.5" y="368.5" width="37" height="37"/>
+                                        <color key="color" red="0.95686274510000002" green="0.4039215686" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="lfp-Cw-HMf" firstAttribute="centerX" secondItem="fEX-Hg-cg9" secondAttribute="centerX" id="Mfi-lu-CAG"/>
+                                    <constraint firstItem="lfp-Cw-HMf" firstAttribute="centerY" secondItem="fEX-Hg-cg9" secondAttribute="centerY" id="orm-NL-3XN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p1w-Iq-4cV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lZx-3M-JOX" firstAttribute="top" secondItem="UGX-PD-NU1" secondAttribute="top" id="3jW-tV-jLA"/>
+                            <constraint firstAttribute="bottom" secondItem="fEX-Hg-cg9" secondAttribute="bottom" constant="34" id="5UY-wc-hbC"/>
                             <constraint firstItem="p1w-Iq-4cV" firstAttribute="bottom" secondItem="aeR-zf-EEX" secondAttribute="bottom" constant="10" id="AGk-K4-dUT"/>
                             <constraint firstItem="p1w-Iq-4cV" firstAttribute="trailing" secondItem="boW-lD-n5Z" secondAttribute="trailing" constant="20" id="Khn-Sz-IMQ"/>
                             <constraint firstItem="lZx-3M-JOX" firstAttribute="leading" secondItem="p1w-Iq-4cV" secondAttribute="leading" id="Psl-6Q-6G7"/>
                             <constraint firstItem="aeR-zf-EEX" firstAttribute="top" secondItem="boW-lD-n5Z" secondAttribute="bottom" constant="30" id="RuK-tR-Fnz"/>
                             <constraint firstAttribute="bottom" secondItem="lZx-3M-JOX" secondAttribute="bottom" id="YA9-7X-sco"/>
+                            <constraint firstAttribute="trailing" secondItem="fEX-Hg-cg9" secondAttribute="trailing" id="aKd-5f-Vij"/>
+                            <constraint firstItem="fEX-Hg-cg9" firstAttribute="leading" secondItem="UGX-PD-NU1" secondAttribute="leading" id="drO-09-x5Z"/>
                             <constraint firstItem="p1w-Iq-4cV" firstAttribute="trailing" secondItem="aeR-zf-EEX" secondAttribute="trailing" constant="20" id="enY-5V-fjU"/>
                             <constraint firstItem="boW-lD-n5Z" firstAttribute="leading" secondItem="p1w-Iq-4cV" secondAttribute="leading" constant="20" id="mPs-Hs-kd5"/>
                             <constraint firstItem="boW-lD-n5Z" firstAttribute="top" secondItem="p1w-Iq-4cV" secondAttribute="top" constant="30" id="pgE-PV-H6c"/>
+                            <constraint firstItem="fEX-Hg-cg9" firstAttribute="top" secondItem="p1w-Iq-4cV" secondAttribute="top" id="q3m-Rs-wMM"/>
                             <constraint firstItem="lZx-3M-JOX" firstAttribute="trailing" secondItem="p1w-Iq-4cV" secondAttribute="trailing" id="sWh-bz-BGI"/>
                             <constraint firstItem="aeR-zf-EEX" firstAttribute="leading" secondItem="p1w-Iq-4cV" secondAttribute="leading" constant="20" id="wvO-HF-OZf"/>
                         </constraints>
@@ -124,6 +145,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="aeR-zf-EEX" id="j32-63-P9L"/>
+                        <outlet property="ivPhoto" destination="boW-lD-n5Z" id="mMc-a7-mC6"/>
+                        <outlet property="viLoading" destination="fEX-Hg-cg9" id="bbI-LN-58O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knA-g1-kmU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,6 +199,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                     <color key="baseForegroundColor" white="1" alpha="0.90402524829999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="2hT-bn-NTU" eventType="touchUpInside" id="apG-xY-0kC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkc-or-ygZ">
                                 <rect key="frame" x="24" y="778" width="366" height="40"/>
@@ -185,6 +214,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
                                     <color key="baseForegroundColor" red="0.95686274509803915" green="0.40392156862745099" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="restart:" destination="2hT-bn-NTU" eventType="touchUpInside" id="ZKp-mi-GKw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ced-r6-sJJ"/>
@@ -208,6 +240,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zKb-Gj-7PV"/>
+                    <connections>
+                        <outlet property="ivPhoto" destination="NXg-vS-hi2" id="db8-53-v5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRw-be-obp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,6 +252,9 @@
     <resources>
         <image name="background" width="375" height="667"/>
         <image name="camera" width="200" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
