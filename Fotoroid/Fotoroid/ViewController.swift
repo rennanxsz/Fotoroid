@@ -14,14 +14,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! EffectsViewController
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! EffectsViewController
+        vc.image = sender as! UIImage
+    }
+    
 
     @IBAction func selectSource(_ sender: UIButton) {
         let alert = UIAlertController(title: "Selecionar foto", message: "De onde você quer escolher a sua foto", preferredStyle: .actionSheet)
