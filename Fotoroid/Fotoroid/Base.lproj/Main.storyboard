@@ -49,7 +49,7 @@
                         <barButtonItem key="backBarButtonItem" title="Foto" id="lQw-T1-Kn9"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="DQQ-Y7-cz3" kind="show" id="p1L-Zr-Q20"/>
+                        <segue destination="DQQ-Y7-cz3" kind="show" identifier="effectsSegue" id="p1L-Zr-Q20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
