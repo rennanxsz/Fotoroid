@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00AFF14127D2F0B50026C850 /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AFF14027D2F0B50026C850 /* EffectCollectionViewCell.swift */; };
 		00B2E7CA27CEF747008A8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2E7C927CEF747008A8111 /* AppDelegate.swift */; };
 		00B2E7CC27CEF747008A8111 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2E7CB27CEF747008A8111 /* SceneDelegate.swift */; };
 		00B2E7CE27CEF747008A8111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2E7CD27CEF747008A8111 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00AFF14027D2F0B50026C850 /* EffectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCollectionViewCell.swift; sourceTree = "<group>"; };
 		00B2E7C627CEF747008A8111 /* Fotoroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotoroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B2E7C927CEF747008A8111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00B2E7CB27CEF747008A8111 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				00D3532E27D195CD00CD8E6E /* FilterManager.swift */,
 				00B2E7DF27CEFFEE008A8111 /* FinalViewController.swift */,
 				00B2E7DD27CEFFC4008A8111 /* EffectsViewController.swift */,
+				00AFF14027D2F0B50026C850 /* EffectCollectionViewCell.swift */,
 				00B2E7D227CEF748008A8111 /* Assets.xcassets */,
 				00B2E7D427CEF748008A8111 /* LaunchScreen.storyboard */,
 				00B2E7D727CEF748008A8111 /* Info.plist */,
@@ -153,6 +156,7 @@
 				00B2E7CA27CEF747008A8111 /* AppDelegate.swift in Sources */,
 				00B2E7CC27CEF747008A8111 /* SceneDelegate.swift in Sources */,
 				00D3532F27D195CD00CD8E6E /* FilterManager.swift in Sources */,
+				00AFF14127D2F0B50026C850 /* EffectCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
