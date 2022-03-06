@@ -6,18 +6,37 @@
 //
 
 import UIKit
+import Photos
 
 class FinalViewController: UIViewController {
 
     @IBOutlet weak var ivPhoto: UIImageView!
+    var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        ivPhoto.image = image
+        ivPhoto.layer.borderWidth = 10
+        ivPhoto.layer.borderColor = UIColor.white.cgColor
     }
-   
+    
+    func saveToAlbum() {
+        
+    }
+    
     @IBAction func save(_ sender: UIButton) {
+        PHPhotoLibrary.requestAuthorization { (status) in
+            switch status {
+            case .authorized:
+                self.saveToAlbum()
+            default:
+                let alert = UIAlertController(title: "ERRO", message: "O Dispositivo precisa de acesso para salvar a foto alterada em sua galeria.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     @IBAction func restart(_ sender: UIButton) {
     }
