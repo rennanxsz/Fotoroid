@@ -49,7 +49,7 @@
                         <barButtonItem key="backBarButtonItem" title="Foto" id="lQw-T1-Kn9"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="DQQ-Y7-cz3" kind="show" identifier="effectsSegue" id="p1L-Zr-Q20"/>
+                        <segue destination="DQQ-Y7-cz3" kind="show" identifier="effectsSegue" id="l3p-Uf-TzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -171,6 +171,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MYD-6B-J5g">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
